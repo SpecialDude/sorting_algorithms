@@ -31,6 +31,9 @@ void shell_sort(int *array, size_t size)
 	size_t i, index, interval;
 	int key;
 
+	if (!array)
+		return;
+
 	interval = get_knuth_interval(size);
 
 	while (interval > 0)
