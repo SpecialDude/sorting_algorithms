@@ -66,5 +66,7 @@ void quick_sorting(int *array, ssize_t low, ssize_t high, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	quick_sorting(array, 0, size - 1, size);
+	if (!array)
+		return;
+	quick_sorting(array, 0, (ssize_t)size - 1, size);
 }
