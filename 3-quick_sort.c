@@ -10,9 +10,10 @@
  *
  * Return: size_t (Partition index)
  */
-int lomuto_partition(int *array, int low, int high, size_t size)
+ssize_t lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size)
 {
-	int i, j, pivot, temp;
+	int pivot, temp;
+	ssize_t i, j;
 
 	pivot = array[high];
 
@@ -45,9 +46,9 @@ int lomuto_partition(int *array, int low, int high, size_t size)
  * @high: Highest Index
  * @size: Number of elements in array
  */
-void quick_sorting(int *array, int low, int high, size_t size)
+void quick_sorting(int *array, ssize_t low, ssize_t high, size_t size)
 {
-	int p;
+	ssize_t p;
 
 	if (low < high)
 	{
