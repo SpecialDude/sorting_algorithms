@@ -50,12 +50,12 @@ void quick_sorting(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	ssize_t p;
 
-	if (low < high)
-	{
-		p = lomuto_partition(array, low, high, size);
-		quick_sorting(array, low, p - 1, size);
-		quick_sorting(array, p + 1, high, size);
-	}
+	if (low >= high || low < 0)
+		return;
+
+	p = lomuto_partition(array, low, high, size);
+	quick_sorting(array, low, p - 1, size);
+	quick_sorting(array, p + 1, high, size);
 }
 
 /**
